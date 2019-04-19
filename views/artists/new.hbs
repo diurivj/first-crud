@@ -1,25 +1,25 @@
-<h2>Create a new artist</h2>
+<h2>{{title}}</h2>
 
-<form action="/artists/new" method="POST">
+<form action={{action}} method="POST">
   <p>
     <label>Name</label>
-    <input type="text" name="name" />
+    <input type=" text" name="name" value="{{artist.name}}" />
   </p>
   <p>
     <label>Genre</label>
-    <input type="text" name="genre" />
+    <input type=" text" name="genre" value="{{artist.genre}}" />
   </p>
   <p>
     <label>Nationality</label>
-    <input type="text" name="nationality" />
+    <input type="text" name="nationality" value="{{artist.nationality}}" />
   </p>
   <p>
     <label>Record Label</label>
-    <input type="text" name="recordLabel" />
+    <input type="text" name="recordLabel" value="{{artist.recordLabel}}" />
   </p>
   <p>
     <label>Year</label>
-    <input type="text" name="year" />
+    <input type="text" name="year" value="{{artist.year}}" />
   </p>
   <p>
     <label>Album</label>
@@ -32,6 +32,6 @@
     </select>
   </p>
   <p>
-    <input type="submit" value="Create">
+    <input type="submit" value={{button}}>
   </p>
 </form>

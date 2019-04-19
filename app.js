@@ -52,6 +52,8 @@ app.locals.title = 'Express - Generated with IronGenerator'
 const index = require('./routes/index')
 const artists = require('./routes/artists')
 const albums = require('./routes/albums')
+const songs = require('./routes/songs')
+app.use('/songs', songs)
 app.use('/albums', albums)
 app.use('/artists', artists)
 app.use('/', index)
