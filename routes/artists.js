@@ -24,4 +24,26 @@ router.post('/new', (req, res, next) => {
     })
 })
 
+router.get('/all', (req, res, next) => {
+  Artist.find()
+    .then(artists => {
+      res.render('artists/all', { artists })
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
+
+router.get('/:id', (req, res, next) => {
+  const { id } = req.params
+  Artist.findById(id)
+    .populate('albums')
+    .then(artist => {
+      res.render('artists/detail', artist)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
+
 module.exports = router

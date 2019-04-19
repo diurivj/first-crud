@@ -22,6 +22,16 @@
     <input type="text" name="year" />
   </p>
   <p>
+    <label>Album</label>
+    <select name="albums">
+      {{#each albums as |album|}}
+      <option value={{album._id}}>
+        {{album.name}}
+      </option>
+      {{/each}}
+    </select>
+  </p>
+  <p>
     <input type="submit" value="Create">
   </p>
 </form>
